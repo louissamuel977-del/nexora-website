@@ -22,8 +22,6 @@ body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;l
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--dark)}
 ::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,7,16,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;max-width:1200px;margin:0 auto}
 .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;text-decoration:none;color:var(--white);letter-spacing:-0.5px}
@@ -38,8 +36,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,7,16,0.95
 .mob-menu{display:none;position:fixed;top:66px;left:0;right:0;background:var(--dark2);border-bottom:1px solid var(--border);padding:20px 5%;z-index:998}
 .mob-menu.open{display:block}
 .mob-menu a{display:block;padding:13px 0;color:var(--text);text-decoration:none;font-size:15px;border-bottom:1px solid var(--border)}
-
-/* SECTIONS */
 section{padding:90px 5%}
 .container{max-width:1200px;margin:0 auto}
 .sec-label{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
@@ -49,8 +45,6 @@ section{padding:90px 5%}
 .sec-head{margin-bottom:52px}
 .sec-head.center{text-align:center}
 .sec-head.center .sec-sub{margin:0 auto}
-
-/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;transition:all .25s;cursor:pointer;border:none;font-family:'Syne',sans-serif}
 .btn-primary{background:linear-gradient(135deg,var(--purple),var(--purple2));color:var(--white);box-shadow:0 0 20px rgba(124,58,237,0.35)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(124,58,237,0.55)}
@@ -58,11 +52,8 @@ section{padding:90px 5%}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(245,158,11,0.5)}
 .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2)}
 .btn-outline:hover{border-color:var(--purple-l);color:var(--purple-l)}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
-
 /* ── CINEMATIC ANIMATED CITY BACKGROUND ── */
 .cyber-city{position:absolute;inset:0;overflow:hidden;perspective:600px}
 .city-floor{position:absolute;bottom:0;left:-50%;right:-50%;height:55%;
@@ -99,6 +90,7 @@ section{padding:90px 5%}
   color:var(--muted2);z-index:3;font-family:'Syne',sans-serif;text-transform:uppercase}
 .created-by b{color:var(--gold);font-weight:700}
 
+
 .hero-orb1{position:absolute;top:-200px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.12) 0%,transparent 70%);animation:orbFloat 8s ease-in-out infinite}
 .hero-orb2{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%);animation:orbFloat 10s ease-in-out infinite reverse}
 .hero-orb3{position:absolute;top:40%;left:30%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.08) 0%,transparent 70%);animation:orbFloat 12s ease-in-out infinite}
@@ -107,8 +99,7 @@ section{padding:90px 5%}
 @keyframes gridMove{0%{background-position:0 0,0 0}100%{background-position:50px 50px,50px 50px}}
 .particles{position:absolute;inset:0;overflow:hidden}
 .particle{position:absolute;width:2px;height:2px;border-radius:50%;background:var(--purple-l);opacity:0;animation:particleFly linear infinite}
-@keyframes particleFly{0%{opacity:0;transform:translateY(100vh)}10%{opacity:0.6}90%{opacity:0.6}100%{opacity:0;transform:translateY(-100px)}}
-
+@keyframes particleFly{0%{opacity:0;transform:translateY(100vh) translateX(0)}10%{opacity:0.6}90%{opacity:0.6}100%{opacity:0;transform:translateY(-100px) translateX(50px)}}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:1}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,58,237,0.12);border:1px solid rgba(124,58,237,0.3);padding:7px 16px;border-radius:100px;font-size:13px;color:var(--purple-l);margin-bottom:24px;font-weight:500;animation:fadeInDown 0.8s ease}
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
@@ -129,8 +120,6 @@ h1 .purple{background:linear-gradient(90deg,var(--purple-l),var(--white),var(--p
 .stat:hover{border-color:var(--border2);background:rgba(124,58,237,0.15);transform:translateY(-3px)}
 .stat-num{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;color:var(--gold)}
 .stat-lbl{font-size:12px;color:var(--muted);margin-top:3px}
-
-/* HERO VISUAL */
 .hero-visual{position:relative;animation:fadeInRight 1s ease 0.3s both}
 @keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
 .hv-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden}
@@ -144,20 +133,17 @@ h1 .purple{background:linear-gradient(90deg,var(--purple-l),var(--white),var(--p
 .m-bar{height:8px;background:rgba(255,255,255,0.05);border-radius:100px;overflow:hidden}
 .m-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--purple),var(--gold));animation:barGrow 2s ease forwards}
 @keyframes barGrow{from{width:0}to{width:var(--w)}}
+.m-val{font-size:11px;color:var(--gold);margin-top:3px;text-align:right}
 .float-badge{position:absolute;background:var(--dark3);border:1px solid var(--border2);border-radius:10px;padding:9px 14px;font-size:12px;font-weight:600;white-space:nowrap;animation:badgeFloat 3s ease-in-out infinite}
 @keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .fb1{top:-18px;right:-18px;color:var(--purple-l)}
 .fb2{bottom:-16px;left:-16px;color:var(--gold)}
 .fb3{top:50%;right:-30px;color:#34D399;animation:badgeFloat 3.5s ease-in-out infinite .5s}
-
-/* SCROLL INDICATOR */
 .scroll-indicator{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;animation:fadeInUp 1s ease 1.2s both}
 .scroll-indicator span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2)}
 .mouse{width:22px;height:36px;border:2px solid var(--border2);border-radius:14px;display:flex;justify-content:center;padding-top:6px}
 .wheel{width:3px;height:7px;background:var(--gold);border-radius:3px;animation:scrollWheel 1.6s ease-in-out infinite}
 @keyframes scrollWheel{0%{opacity:1;transform:translateY(0)}80%{opacity:0;transform:translateY(12px)}100%{opacity:0}}
-
-/* SERVICES */
 #services{background:var(--dark2)}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .svc-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;transition:all .35s;position:relative;overflow:hidden;cursor:default}
@@ -170,8 +156,6 @@ h1 .purple{background:linear-gradient(90deg,var(--purple-l),var(--white),var(--p
 .svc-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--white);margin-bottom:8px}
 .svc-desc{font-size:14px;color:var(--muted);line-height:1.7}
 .svc-from{margin-top:14px;font-size:13px;color:var(--gold);font-weight:600}
-
-/* RATES */
 #rates{background:var(--dark)}
 .rate-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
 .rtab{padding:9px 20px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border);color:var(--muted);background:transparent;transition:all .2s;font-family:'DM Sans',sans-serif}
@@ -187,8 +171,6 @@ h1 .purple{background:linear-gradient(90deg,var(--purple-l),var(--white),var(--p
 .rbadge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;margin-left:7px;vertical-align:middle;font-weight:600}
 .rb-new{background:rgba(124,58,237,0.2);color:var(--purple-l)}
 .rb-hot{background:rgba(245,158,11,0.2);color:var(--gold-l)}
-
-/* PLANS */
 #plans{background:var(--dark2)}
 .plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 .plan-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:30px;position:relative;transition:all .35s;display:flex;flex-direction:column}
@@ -211,8 +193,6 @@ h1 .purple{background:linear-gradient(90deg,var(--purple-l),var(--white),var(--p
 .plan-btn-fill:hover{box-shadow:0 6px 28px rgba(124,58,237,0.5);transform:translateY(-1px)}
 .plan-btn-out{background:transparent;color:var(--purple-l);border:1px solid var(--purple)}
 .plan-btn-out:hover{background:rgba(124,58,237,0.12)}
-
-/* CONTACT */
 #contact{background:var(--dark)}
 .form-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
 .form-box{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:38px;position:relative;overflow:hidden}
@@ -238,8 +218,6 @@ textarea.finput{resize:vertical;min-height:95px}
 .pm-item{background:rgba(124,58,237,0.06);border:0.5px solid var(--border);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px;transition:all .2s}
 .pm-item:hover{border-color:var(--gold);color:var(--gold-l)}
 .pm-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
-
-/* REVIEWS */
 #reviews{background:var(--dark2)}
 .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .rev-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;transition:all .35s;position:relative;overflow:hidden}
@@ -252,8 +230,6 @@ textarea.finput{resize:vertical;min-height:95px}
 .rev-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;color:var(--white);flex-shrink:0}
 .rev-name{font-size:14px;font-weight:600;color:var(--white)}
 .rev-biz{font-size:12px;color:var(--muted)}
-
-/* GALLERY */
 #gallery{background:var(--dark)}
 .gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
 .gal-item{aspect-ratio:1;border-radius:16px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:38px;transition:all .35s;cursor:pointer;position:relative;overflow:hidden}
@@ -261,8 +237,6 @@ textarea.finput{resize:vertical;min-height:95px}
 .gal-item:hover{border-color:var(--purple);transform:scale(1.05);box-shadow:0 10px 30px rgba(124,58,237,0.2)}
 .gal-item:hover::after{opacity:1}
 .gal-label{font-size:11px;color:var(--muted);font-weight:500;position:relative;z-index:1}
-
-/* SOCIAL MEDIA */
 #social-media{background:var(--dark2)}
 .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
 .social-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;text-align:center;text-decoration:none;transition:all .35s;display:flex;flex-direction:column;align-items:center;gap:12px;position:relative;overflow:hidden}
@@ -275,23 +249,24 @@ textarea.finput{resize:vertical;min-height:95px}
 .sc-tiktok::before{background:linear-gradient(135deg,rgba(0,0,0,0.8),rgba(105,201,208,0.2))}
 .sc-tiktok:hover{box-shadow:0 14px 30px rgba(105,201,208,0.2)}
 .sc-tiktok .social-icon{background:linear-gradient(135deg,#010101,#69C9D0)}
+.sc-youtube::before{background:linear-gradient(135deg,rgba(255,0,0,0.15),rgba(255,0,0,0.05))}
+.sc-youtube:hover{box-shadow:0 14px 30px rgba(255,0,0,0.2)}
+.sc-youtube .social-icon{background:linear-gradient(135deg,#FF0000,#CC0000)}
 .sc-instagram::before{background:linear-gradient(135deg,rgba(225,48,108,0.15),rgba(253,87,33,0.1))}
 .sc-instagram:hover{box-shadow:0 14px 30px rgba(225,48,108,0.2)}
 .sc-instagram .social-icon{background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045)}
-.sc-facebook::before{background:linear-gradient(135deg,rgba(24,119,242,0.15),rgba(24,119,242,0.05))}
-.sc-facebook:hover{box-shadow:0 14px 30px rgba(24,119,242,0.2)}
-.sc-facebook .social-icon{background:linear-gradient(135deg,#1877F2,#0D5DB5)}
 .sc-x::before{background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))}
 .sc-x:hover{box-shadow:0 14px 30px rgba(255,255,255,0.1)}
 .sc-x .social-icon{background:linear-gradient(135deg,#1a1a1a,#333)}
 .sc-whatsapp::before{background:linear-gradient(135deg,rgba(37,211,102,0.15),rgba(37,211,102,0.05))}
 .sc-whatsapp:hover{box-shadow:0 14px 30px rgba(37,211,102,0.2)}
 .sc-whatsapp .social-icon{background:linear-gradient(135deg,#25D366,#128C7E)}
+.sc-facebook::before{background:linear-gradient(135deg,rgba(24,119,242,0.15),rgba(24,119,242,0.05))}
+.sc-facebook:hover{box-shadow:0 14px 30px rgba(24,119,242,0.2)}
+.sc-facebook .social-icon{background:linear-gradient(135deg,#1877F2,#0D5DB5)}
 .sc-linkedin::before{background:linear-gradient(135deg,rgba(10,102,194,0.15),rgba(10,102,194,0.05))}
 .sc-linkedin:hover{box-shadow:0 14px 30px rgba(10,102,194,0.2)}
 .sc-linkedin .social-icon{background:linear-gradient(135deg,#0A66C2,#084F97)}
-
-/* FREE TOOLS */
 #tools{background:var(--dark)}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .tool-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;transition:border-color .3s}
@@ -309,8 +284,6 @@ textarea.finput{resize:vertical;min-height:95px}
 .tool-stat{font-size:12px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
 .copy-btn{background:transparent;color:var(--purple-l);border:1px solid var(--purple);padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;display:none;transition:all .2s}
 .copy-btn:hover{background:rgba(124,58,237,0.15)}
-
-/* LOGIN MODAL */
 #login-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(6px)}
 #login-modal.open{display:flex}
 .modal{background:var(--dark2);border:1px solid var(--border2);border-radius:22px;padding:38px;width:100%;max-width:400px;position:relative;margin:20px;box-shadow:0 0 60px rgba(124,58,237,0.2)}
@@ -324,8 +297,6 @@ textarea.finput{resize:vertical;min-height:95px}
 .modal-tab.active{background:linear-gradient(135deg,var(--purple),var(--purple2));color:var(--white);box-shadow:0 2px 10px rgba(124,58,237,0.3)}
 .modal-form{display:none}
 .modal-form.active{display:block}
-
-/* FOOTER */
 footer{background:var(--dark2);border-top:1px solid var(--border);padding:56px 5% 24px}
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
@@ -340,17 +311,11 @@ footer{background:var(--dark2);border-top:1px solid var(--border);padding:56px 5
 .footer-col a:hover{color:var(--purple-l)}
 .footer-bottom{border-top:1px solid var(--border);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .footer-copy{font-size:12px;color:var(--muted2)}
-
-/* WA FLOAT */
 .wa-float{position:fixed;bottom:26px;right:26px;z-index:997;width:58px;height:58px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:27px;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,0.4);animation:waBounce 3s ease-in-out infinite;color:white;transition:transform .2s}
 @keyframes waBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .wa-float:hover{transform:scale(1.12)!important;animation:none}
-
-/* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
 @media(max-width:960px){
 .hero-grid{grid-template-columns:1fr}
 .hero-visual{display:none}
@@ -371,20 +336,16 @@ section{padding:70px 5%}
 </style>
 </head>
 <body>
-
-<!-- AUDIO -->
 <script>
 var AudioCtx=window.AudioContext||window.webkitAudioContext;
 var audioCtx=AudioCtx?new AudioCtx():null;
 function playClick(freq,dur,vol){if(!audioCtx)return;try{var o=audioCtx.createOscillator();var g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.setValueAtTime(freq||440,audioCtx.currentTime);o.frequency.exponentialRampToValueAtTime(freq*0.5||220,audioCtx.currentTime+(dur||0.15));g.gain.setValueAtTime(vol||0.08,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+(dur||0.15));o.start();o.stop(audioCtx.currentTime+(dur||0.15));}catch(e){}}
 function playHover(){playClick(600,0.08,0.04)}
-function playSuccess(){if(!audioCtx)return;[523,659,784].forEach(function(f,i){setTimeout(function(){playClick(f,0.2,0.08);},i*100)});}
+function playSuccess(){if(!audioCtx)return;[523,659,784].forEach((f,i)=>{setTimeout(()=>playClick(f,0.2,0.08),i*100)});}
 function playOpen(){playClick(800,0.12,0.06)}
 function playWhoosh(){if(!audioCtx)return;try{var o=audioCtx.createOscillator();var g=audioCtx.createGain();o.type='sawtooth';o.frequency.setValueAtTime(180,audioCtx.currentTime);o.frequency.exponentialRampToValueAtTime(900,audioCtx.currentTime+0.4);g.gain.setValueAtTime(0.0,audioCtx.currentTime);g.gain.linearRampToValueAtTime(0.05,audioCtx.currentTime+0.1);g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+0.5);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+0.5);}catch(e){}}
 document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.target.closest('.plan-btn')||e.target.closest('.tool-btn')){playClick(700,0.1,0.07);}});
 </script>
-
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#home" class="logo">NEX<span>O</span>RA.</a>
@@ -411,8 +372,6 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
   <a href="#contact" onclick="toggleMenu()">Contact</a>
   <a href="#" onclick="openLogin();toggleMenu();return false" style="color:var(--purple-l)">Login</a>
 </div>
-
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
     <div class="cyber-city">
@@ -423,9 +382,7 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
       <div class="holo holo3"></div>
       <div id="streams"></div>
     </div>
-    <div class="hero-orb1"></div>
-    <div class="hero-orb2"></div>
-    <div class="hero-orb3"></div>
+    <div class="hero-orb1"></div><div class="hero-orb2"></div><div class="hero-orb3"></div>
     <div class="grid-lines"></div>
     <div class="particles" id="particles"></div>
   </div>
@@ -465,8 +422,6 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
   </div>
   <div class="scroll-indicator"><span>Scroll</span><div class="mouse"><div class="wheel"></div></div></div>
 </section>
-
-<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <div class="sec-head reveal"><div class="sec-label">What We Do</div><h2 class="sec-title">Our <span>Services</span></h2><p class="sec-sub">Complete digital solutions for your business — powered by the latest AI technology</p></div>
@@ -480,8 +435,6 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
     </div>
   </div>
 </section>
-
-<!-- RATES -->
 <section id="rates">
   <div class="container">
     <div class="sec-head reveal"><div class="sec-label">Pricing</div><h2 class="sec-title">Service <span>Rates</span></h2><p class="sec-sub">Transparent pricing — no hidden charges. What you see is what you pay.</p></div>
@@ -503,8 +456,6 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
     <table class="rate-table" id="tab-support"><tr><th>Service</th><th>Price (PKR)</th><th>Type</th></tr><tr><td>Monthly Analytics Report</td><td>5,000</td><td>Monthly</td></tr><tr><td>Dedicated Account Manager</td><td>20,000</td><td>Monthly</td></tr><tr><td>WhatsApp Support</td><td>3,000</td><td>Monthly</td></tr><tr><td>Business Consultation</td><td>5,000</td><td>Per session</td></tr><tr><td>Competitor Analysis Report <span class="rbadge rb-new">NEW</span></td><td>8,000</td><td>One time</td></tr><tr><td>Brand Audit Report <span class="rbadge rb-new">NEW</span></td><td>10,000</td><td>One time</td></tr></table>
   </div>
 </section>
-
-<!-- PLANS -->
 <section id="plans">
   <div class="container">
     <div class="sec-head center reveal"><div class="sec-label">Packages</div><h2 class="sec-title">Monthly <span>Plans</span></h2><p class="sec-sub">A plan for every budget — AI-powered tools included in every package</p></div>
@@ -515,47 +466,20 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
     </div>
   </div>
 </section>
-
-<!-- SOCIAL MEDIA -->
 <section id="social-media">
   <div class="container">
     <div class="sec-head center reveal"><div class="sec-label">Find Us Online</div><h2 class="sec-title">Follow <span>Nexora</span></h2><p class="sec-sub">Connect with us on all major platforms — click to visit our profiles</p></div>
     <div class="social-grid reveal">
-      <a href="https://www.tiktok.com/@nexora.technologies" target="_blank" class="social-card sc-tiktok" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-tiktok"></i></div>
-        <div class="social-name">TikTok</div>
-        <div class="social-handle">@nexora.technologies</div>
-      </a>
-      <a href="https://www.instagram.com/nexora6235/" target="_blank" class="social-card sc-instagram" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-instagram"></i></div>
-        <div class="social-name">Instagram</div>
-        <div class="social-handle">@nexora6235</div>
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=61585138066919" target="_blank" class="social-card sc-facebook" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
-        <div class="social-name">Facebook</div>
-        <div class="social-handle">Nexora Technologies</div>
-      </a>
-      <a href="https://x.com/technologi77842" target="_blank" class="social-card sc-x" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-x-twitter"></i></div>
-        <div class="social-name">X (Twitter)</div>
-        <div class="social-handle">@technologi77842</div>
-      </a>
-      <a href="https://wa.me/923112806897" target="_blank" class="social-card sc-whatsapp" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
-        <div class="social-name">WhatsApp</div>
-        <div class="social-handle">+92 311 2806897</div>
-      </a>
-      <a href="https://www.linkedin.com/in/nexora-technologies-5b4abb400/" target="_blank" class="social-card sc-linkedin" onmouseenter="playHover()">
-        <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
-        <div class="social-name">LinkedIn</div>
-        <div class="social-handle">Nexora Technologies</div>
-      </a>
+      <a href="https://www.tiktok.com/@nexora.technologies" target="_blank" class="social-card sc-tiktok"><div class="social-icon"><i class="fab fa-tiktok"></i></div><div class="social-name">TikTok</div><div class="social-handle">@nexora.technologies</div></a>
+      <a href="https://youtube.com/@nexora.technologies" target="_blank" class="social-card sc-youtube"><div class="social-icon"><i class="fab fa-youtube"></i></div><div class="social-name">YouTube</div><div class="social-handle">@nexora.technologies</div></a>
+      <a href="https://www.instagram.com/nexora6235/" target="_blank" class="social-card sc-instagram"><div class="social-icon"><i class="fab fa-instagram"></i></div><div class="social-name">Instagram</div><div class="social-handle">@nexora.technologies</div></a>
+      <a href="https://x.com/technologi77842" target="_blank" class="social-card sc-x"><div class="social-icon"><i class="fab fa-x-twitter"></i></div><div class="social-name">X (Twitter)</div><div class="social-handle">@technologi77842</div></a>
+      <a href="https://wa.me/923112806897" target="_blank" class="social-card sc-whatsapp"><div class="social-icon"><i class="fab fa-whatsapp"></i></div><div class="social-name">WhatsApp</div><div class="social-handle">+92 311 2806897</div></a>
+      <a href="https://www.facebook.com/profile.php?id=61585138066919" target="_blank" class="social-card sc-facebook"><div class="social-icon"><i class="fab fa-facebook-f"></i></div><div class="social-name">Facebook</div><div class="social-handle">Nexora Technologies</div></a>
+      <a href="https://www.linkedin.com/in/nexora-technologies-5b4abb400/" target="_blank" class="social-card sc-linkedin"><div class="social-icon"><i class="fab fa-linkedin-in"></i></div><div class="social-name">LinkedIn</div><div class="social-handle">Nexora Technologies</div></a>
     </div>
   </div>
 </section>
-
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="sec-head reveal"><div class="sec-label">Get In Touch</div><h2 class="sec-title">Ready to <span>Get Started?</span></h2><p class="sec-sub">Fill the form below — we'll reach out on WhatsApp within minutes</p></div>
@@ -568,7 +492,7 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
           <div class="fg"><label class="flabel">Business Type *</label><input type="text" class="finput" id="fBiz" placeholder="Restaurant, Boutique, Clinic..." required></div>
           <div class="fg"><label class="flabel">Which Service Do You Need? *</label><select class="finput" id="fService" required><option value="">-- Select Service --</option><option>Starter Plan (15,000/mo)</option><option>Growth Plan (30,000/mo)</option><option>Pro Plan (60,000/mo)</option><option>Website Development</option><option>Social Media Management</option><option>AI Chatbot & Automation</option><option>Branding & Design</option><option>Digital Marketing & Ads</option><option>Video & Media</option><option>Custom Package</option></select></div>
           <div class="fg"><label class="flabel">Budget Range</label><select class="finput" id="fBudget"><option value="">-- Select Budget --</option><option>5,000 – 15,000 PKR</option><option>15,000 – 30,000 PKR</option><option>30,000 – 60,000 PKR</option><option>60,000+ PKR</option></select></div>
-          <div class="fg"><label class="flabel">Message / Questions</label><textarea class="finput" id="fMsg" placeholder="Tell us about your needs or ask any questions..."></textarea></div>
+          <div class="fg"><label class="flabel">Message / Questions</label><textarea class="finput" id="fMsg" placeholder="Tell us about your needs..."></textarea></div>
           <div class="form-err" id="formErr">⚠️ Please fill in Name, WhatsApp number, Business type and Service!</div>
           <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Submit — We'll Contact You on WhatsApp →</button>
         </form>
@@ -578,23 +502,12 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
         <div class="ci"><div class="ci-icon"><i class="fab fa-whatsapp"></i></div><div><div class="ci-label">WhatsApp</div><div class="ci-val">+92 311 2806897</div></div></div>
         <div class="ci"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="ci-label">Location</div><div class="ci-val">Karachi, Pakistan</div></div></div>
         <div class="ci"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><div class="ci-label">Working Hours</div><div class="ci-val">Mon–Sat: 9:00 AM – 8:00 PM<br><span style="color:var(--gold);font-size:13px">AI Bot: Available 24/7</span></div></div></div>
-        <div class="pm-card">
-          <div class="pm-title">💳 Payment Methods</div>
-          <div class="pm-grid">
-            <div class="pm-item"><div class="pm-dot"></div>Bank Transfer</div>
-            <div class="pm-item"><div class="pm-dot"></div>EasyPaisa</div>
-            <div class="pm-item"><div class="pm-dot"></div>JazzCash</div>
-            <div class="pm-item"><div class="pm-dot"></div>Cash</div>
-          </div>
-          <p style="font-size:12px;color:var(--gold);margin-top:8px">JazzCash / EasyPaisa: <b>0311-2806897</b></p>
-          <p style="font-size:12px;color:var(--muted2);margin-top:6px">Bank details shared after confirmation.</p>
-        </div>
+        <div class="pm-card"><div class="pm-title">💳 Payment Methods</div><div class="pm-grid"><div class="pm-item"><div class="pm-dot"></div>Bank Transfer</div><div class="pm-item"><div class="pm-dot"></div>EasyPaisa</div><div class="pm-item"><div class="pm-dot"></div>JazzCash</div><div class="pm-item"><div class="pm-dot"></div>Cash</div></div><p style="font-size:12px;color:var(--gold);margin-top:8px">JazzCash / EasyPaisa: <b>0311-2806897</b></p>
+          <p style="font-size:12px;color:var(--muted2);margin-top:6px">Bank details shared after confirmation.</p></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- REVIEWS -->
 <section id="reviews">
   <div class="container">
     <div class="sec-head center reveal"><div class="sec-label">Testimonials</div><h2 class="sec-title">Client <span>Reviews</span></h2><p class="sec-sub">What our clients say about working with Nexora Technologies</p></div>
@@ -608,11 +521,9 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
     </div>
   </div>
 </section>
-
-<!-- GALLERY -->
 <section id="gallery">
   <div class="container">
-    <div class="sec-head center reveal"><div class="sec-label">Our Work</div><h2 class="sec-title">Portfolio <span>Gallery</span></h2><p class="sec-sub">Work we've done for our clients — replace placeholders with real images</p></div>
+    <div class="sec-head center reveal"><div class="sec-label">Our Work</div><h2 class="sec-title">Portfolio <span>Gallery</span></h2><p class="sec-sub">Work we've done for our clients</p></div>
     <div class="gal-grid reveal">
       <div class="gal-item"><span>🏠</span><span class="gal-label">Website Design</span></div>
       <div class="gal-item"><span>📱</span><span class="gal-label">Social Media</span></div>
@@ -625,8 +536,6 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
     </div>
   </div>
 </section>
-
-<!-- FREE TOOLS -->
 <section id="tools">
   <div class="container">
     <div class="sec-head center reveal"><div class="sec-label">Free Tools</div><h2 class="sec-title">Free Online <span>Tools</span></h2><p class="sec-sub">From Nexora — completely free, no signup required</p></div>
@@ -635,4 +544,62 @@ document.addEventListener('click',function(e){if(e.target.closest('.btn')||e.tar
       <div class="tool-card reveal"><div class="tool-title">🔤 Text Converter <span class="tool-tag">FREE</span></div><div class="tool-desc">Convert text to UPPER, lower or Title Case</div><div class="tool-area"><textarea id="caseIn" placeholder="Type your text here..."></textarea><div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center"><button class="tool-btn" onclick="doCase('upper')">UPPER</button><button class="tool-btn" style="background:var(--purple2)" onclick="doCase('lower')">lower</button><button class="tool-btn" style="background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark)" onclick="doCase('title')">Title</button></div><div class="tool-result" id="caseOut"></div><button class="copy-btn" id="caseCopy" onclick="copyText('caseOut','caseCopy')">Copy</button></div></div>
       <div class="tool-card reveal"><div class="tool-title">🎨 Color Picker <span class="tool-tag">FREE</span></div><div class="tool-desc">Pick brand colors and get HEX + RGB codes</div><div class="tool-area"><input type="color" id="colorPick" value="#7C3AED" oninput="updateColor()" style="width:80px;height:80px;border:none;cursor:pointer;border-radius:50%;background:none"><div style="font-size:13px;margin-top:6px;text-align:center"><div style="color:var(--gold)">HEX: <strong id="hexOut">#7C3AED</strong></div><div style="color:var(--muted);margin-top:4px">RGB: <strong id="rgbOut">124, 58, 237</strong></div></div><button class="copy-btn" id="colorCopy" style="display:block" onclick="copyHex()">Copy HEX</button></div></div>
       <div class="tool-card reveal"><div class="tool-title">🔐 Password Generator <span class="tool-tag">FREE</span></div><div class="tool-desc">Generate strong secure passwords instantly</div><div class="tool-area"><div style="display:flex;align-items:center;gap:10px;width:100%;margin-bottom:12px"><span style="font-size:13px;color:var(--muted)">Length:</span><input type="range" min="8" max="24" value="12" id="pwLen" oninput="document.getElementById('pwLenV').textContent=this.value" style="flex:1;accent-color:var(--purple)"><span id="pwLenV" style="font-size:13px;color:var(--gold);min-width:20px;font-weight:700">12</span></div><button class="tool-btn" onclick="genPw()">Generate Password</button><div class="tool-result" id="pwOut" style="font-family:monospace;font-size:15px;letter-spacing:1px;text-align:center"></div><button class="copy-btn" id="pwCopy" onclick="copyText('pwOut','pwCopy')">Copy</button></div></div>
-      <div class="tool-card reveal"><div class="tool-title">📱 QR Code Generator <span class="tool-tag">FREE</span></div><div class="tool-desc">Generate QR codes for WhatsApp links, websites o
+      <div class="tool-card reveal"><div class="tool-title">📱 QR Code Generator <span class="tool-tag">FREE</span></div><div class="tool-desc">Generate QR codes for WhatsApp links, websites or any text</div><div class="tool-area"><input type="text" id="qrIn" placeholder="Enter link or text..."><button class="tool-btn" onclick="genQR()">Generate QR Code</button><div id="qrOut" style="display:none;margin-top:10px"><img id="qrImg" style="width:140px;height:140px;border-radius:10px;border:2px solid var(--border2)"><div style="font-size:12px;color:var(--muted);margin-top:6px">Right click to save!</div></div></div></div>
+      <div class="tool-card reveal"><div class="tool-title">🖼️ Image Info Checker <span class="tool-tag">FREE</span></div><div class="tool-desc">Check image size, dimensions and file type instantly</div><div class="tool-area"><input type="file" id="imgFile" accept="image/*" onchange="checkImg()"><label for="imgFile" class="tool-btn" style="cursor:pointer">Upload Image</label><div class="tool-result" id="imgInfo"></div><img id="imgPrev" style="max-width:100%;max-height:110px;border-radius:8px;display:none;margin-top:8px;border:1px solid var(--border)"></div></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><a href="#home" class="footer-logo">NEX<span>O</span>RA.</a><p class="footer-desc">Pakistan's leading AI-powered digital marketing agency. Let us take your business to the next level.</p><div class="footer-socials"><a href="https://www.facebook.com/profile.php?id=61585138066919" target="_blank" class="fsocial"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/nexora6235/" target="_blank" class="fsocial"><i class="fab fa-instagram"></i></a><a href="https://youtube.com/@nexora.technologies" target="_blank" class="fsocial"><i class="fab fa-youtube"></i></a><a href="https://www.tiktok.com/@nexora.technologies" target="_blank" class="fsocial"><i class="fab fa-tiktok"></i></a><a href="https://www.linkedin.com/in/nexora-technologies-5b4abb400/" target="_blank" class="fsocial"><i class="fab fa-linkedin-in"></i></a><a href="https://x.com/technologi77842" target="_blank" class="fsocial"><i class="fab fa-x-twitter"></i></a></div></div>
+      <div class="footer-col"><h4>Services</h4><a href="#services">Branding & Design</a><a href="#services">Social Media</a><a href="#services">Website Development</a><a href="#services">AI & Automation</a><a href="#services">Digital Ads</a><a href="#services">Video & Media</a></div>
+      <div class="footer-col"><h4>Plans</h4><a href="#plans">Starter — 15k/mo</a><a href="#plans">Growth — 30k/mo</a><a href="#plans">Pro — 60k/mo</a><a href="#rates">View All Rates</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#home">About Us</a><a href="#reviews">Client Reviews</a><a href="#gallery">Portfolio</a><a href="#tools">Free Tools</a><a href="#contact">Contact Us</a></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">© 2025 Nexora Technologies — Karachi, Pakistan. All rights reserved.</div><div class="footer-copy">📧 nexoratech977@gmail.com &nbsp;|&nbsp; 📱 +92 311 2806897</div></div>
+  </div>
+</footer>
+<a href="https://wa.me/923112806897?text=Hello!%20I%20want%20to%20know%20more%20about%20Nexora%20Technologies%20services." class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<div id="login-modal">
+  <div class="modal">
+    <button class="modal-x" onclick="closeLogin()">✕</button>
+    <div class="modal-title">Welcome Back</div>
+    <div class="modal-sub">Login to your client portal</div>
+    <div class="modal-tabs"><button class="modal-tab active" onclick="switchTab('login',this)">Login</button><button class="modal-tab" onclick="switchTab('signup',this)">Sign Up</button></div>
+    <div id="tab-login" class="modal-form active"><div class="fg"><label class="flabel">Email Address</label><input type="email" class="finput" placeholder="your@email.com"></div><div class="fg"><label class="flabel">Password</label><input type="password" class="finput" placeholder="••••••••"></div><button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:4px">Login</button><p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px">Forgot password? <a href="mailto:nexoratech977@gmail.com" style="color:var(--purple-l)">Email us</a></p></div>
+    <div id="tab-signup" class="modal-form"><div class="fg"><label class="flabel">Full Name</label><input type="text" class="finput" placeholder="Your full name"></div><div class="fg"><label class="flabel">Email Address</label><input type="email" class="finput" placeholder="your@email.com"></div><div class="fg"><label class="flabel">Password</label><input type="password" class="finput" placeholder="Create a strong password"></div><button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:4px">Create Account</button></div>
+  </div>
+</div>
+<script>
+// DATA STREAMS
+(function(){var c=document.getElementById('streams');if(!c)return;for(var i=0;i<18;i++){var s=document.createElement('div');s.className='data-stream';s.style.left=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*4)+'s';s.style.animationDelay=(Math.random()*5)+'s';s.style.background='linear-gradient(to bottom,transparent,'+(Math.random()>0.5?'var(--gold-l)':'var(--purple-l)')+',transparent)';c.appendChild(s);}})();
+(function(){var c=document.getElementById('particles');if(!c)return;for(var i=0;i<25;i++){var p=document.createElement('div');p.className='particle';p.style.left=Math.random()*100+'%';p.style.animationDuration=(8+Math.random()*12)+'s';p.style.animationDelay=(Math.random()*10)+'s';p.style.width=p.style.height=(1+Math.random()*2)+'px';p.style.opacity='0';c.appendChild(p);}})();
+(function(){var words=['Digital','Online','AI-Driven','Powerful','Future'];var i=0,el=document.getElementById('typeWord');if(!el)return;setInterval(function(){el.style.opacity='0';el.style.transform='translateY(8px)';setTimeout(function(){i=(i+1)%words.length;el.textContent=words[i];el.style.opacity='1';el.style.transform='translateY(0)';},300);},2600);})();
+(function(){var card=document.querySelector('.tilt-card');if(!card)return;var visual=document.querySelector('.hero-visual');visual.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-0.5;var y=(e.clientY-r.top)/r.height-0.5;card.style.transform='perspective(900px) rotateY('+(x*12)+'deg) rotateX('+(-y*12)+'deg) scale(1.02)';});visual.addEventListener('mouseleave',function(){card.style.transform='perspective(900px) rotateY(0) rotateX(0) scale(1)';});})();
+document.querySelectorAll('.magnetic-btn').forEach(function(btn){btn.addEventListener('mousemove',function(e){var r=btn.getBoundingClientRect();var x=e.clientX-r.left-r.width/2;var y=e.clientY-r.top-r.height/2;btn.style.transform='translate('+(x*0.25)+'px,'+(y*0.35)+'px)';});btn.addEventListener('mouseleave',function(){btn.style.transform='translate(0,0)';});});
+function animateCount(el,target){var start=0,step=Math.ceil(target/60);var timer=setInterval(function(){start+=step;if(start>=target){start=target;clearInterval(timer);}el.textContent=start+'+';},30);}
+window.addEventListener('load',function(){document.querySelectorAll('.stat-num[data-count]').forEach(function(el){animateCount(el,parseInt(el.getAttribute('data-count')));});});
+var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
+function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open')}
+function openLogin(){document.getElementById('login-modal').classList.add('open')}
+function closeLogin(){document.getElementById('login-modal').classList.remove('open')}
+function switchTab(t,el){document.querySelectorAll('.modal-tab').forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.modal-form').forEach(function(x){x.classList.remove('active')});el.classList.add('active');document.getElementById('tab-'+t).classList.add('active');}
+document.getElementById('login-modal').addEventListener('click',function(e){if(e.target===this)closeLogin()});
+window.addEventListener('scroll',function(){var n=document.querySelector('nav');n.style.borderBottomColor=window.scrollY>50?'rgba(124,58,237,0.35)':'rgba(124,58,237,0.2)';});
+function showTab(cat,el){document.querySelectorAll('.rtab').forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.rate-table').forEach(function(x){x.classList.remove('active')});el.classList.add('active');document.getElementById('tab-'+cat).classList.add('active');}
+function openContactForm(plan){if(plan){document.getElementById('fService').value=plan;}document.getElementById('contact').scrollIntoView({behavior:'smooth'});}
+function submitForm(e){e.preventDefault();var n=document.getElementById('fName').value.trim();var p=document.getElementById('fPhone').value.trim();var b=document.getElementById('fBiz').value.trim();var s=document.getElementById('fService').value.trim();var em=document.getElementById('fEmail').value.trim();var bud=document.getElementById('fBudget').value.trim();var m=document.getElementById('fMsg').value.trim();if(!n||!p||!b||!s){document.getElementById('formErr').style.display='block';return;}document.getElementById('formErr').style.display='none';var wa='923112806897';var msg='Hello!+I+am+contacting+from+Nexora+website.%0A%0A*Name:*+'+encodeURIComponent(n)+'%0A*WhatsApp:*+'+encodeURIComponent(p)+'%0A*Business:*+'+encodeURIComponent(b)+'%0A*Service:*+'+encodeURIComponent(s)+(bud?'%0A*Budget:*+'+encodeURIComponent(bud):'')+(em?'%0A*Email:*+'+encodeURIComponent(em):'')+(m?'%0A%0A*Message:*+'+encodeURIComponent(m):'')+'%0A%0APlease+contact+me.+Thank+you!';setTimeout(function(){window.open('https://wa.me/'+wa+'?text='+msg,'_blank');},400);document.getElementById('mainForm').style.display='none';document.getElementById('formSuccess').style.display='block';}
+function resetForm(){document.getElementById('mainForm').reset();document.getElementById('mainForm').style.display='block';document.getElementById('formSuccess').style.display='none';document.getElementById('formErr').style.display='none';}
+function countWords(){var t=document.getElementById('wcInput').value;document.getElementById('wcW').textContent=t.trim()?t.trim().split(/\s+/).length:0;document.getElementById('wcC').textContent=t.length;document.getElementById('wcL').textContent=t?t.split('\n').length:0;}
+function doCase(type){var t=document.getElementById('caseIn').value;if(!t)return;var r=t;if(type==='upper')r=t.toUpperCase();else if(type==='lower')r=t.toLowerCase();else r=t.replace(/\w\S*/g,function(w){return w.charAt(0).toUpperCase()+w.substr(1).toLowerCase()});var el=document.getElementById('caseOut');el.textContent=r;el.style.display='block';document.getElementById('caseCopy').style.display='block';}
+function copyText(id,btnId){navigator.clipboard.writeText(document.getElementById(id).textContent).then(function(){var b=document.getElementById(btnId);b.textContent='Copied!';setTimeout(function(){b.textContent='Copy'},2000);});}
+function updateColor(){var c=document.getElementById('colorPick').value;document.getElementById('hexOut').textContent=c.toUpperCase();var r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);document.getElementById('rgbOut').textContent=r+', '+g+', '+b;}
+function copyHex(){navigator.clipboard.writeText(document.getElementById('hexOut').textContent).then(function(){var b=document.getElementById('colorCopy');b.textContent='Copied!';setTimeout(function(){b.textContent='Copy HEX'},2000);});}
+function genPw(){var len=parseInt(document.getElementById('pwLen').value);var ch='ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#$%&*';var pw='';for(var i=0;i<len;i++)pw+=ch[Math.floor(Math.random()*ch.length)];var el=document.getElementById('pwOut');el.textContent=pw;el.style.display='block';document.getElementById('pwCopy').style.display='block';}
+function genQR(){var t=document.getElementById('qrIn').value.trim();if(!t){alert('Please enter a link or text first!');return;}document.getElementById('qrImg').src='https://api.qrserver.com/v1/create-qr-code/?size=140x140&color=7C3AED&bgcolor=130D20&data='+encodeURIComponent(t);document.getElementById('qrOut').style.display='block';}
+function checkImg(){var f=document.getElementById('imgFile').files[0];if(!f)return;var r=new FileReader();r.onload=function(e){var img=new Image();img.onload=function(){var el=document.getElementById('imgInfo');el.textContent='Size: '+(f.size/1024).toFixed(1)+'KB | Dimensions: '+img.width+'x'+img.height+'px | Type: '+f.type;el.style.display='block';var p=document.getElementById('imgPrev');p.src=e.target.result;p.style.display='block';};img.src=e.target.result;};r.readAsDataURL(f);}
+</script>
+</body>
+</html>
